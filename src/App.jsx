@@ -1,14 +1,18 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import axios from 'axios'
 
-useEffect(()=>{
-  axios.get('http://localhost')
-},[])
 function App() {
   const [count, setCount] = useState([])
+  useEffect(()=>{
+    axios.get('/api/jokes')
+    .then((res)=>{
+      setCount(res.data)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+  },[])
 
   return (
     <>
@@ -16,12 +20,12 @@ function App() {
       <p>COUNT: {count.length}</p>
 
       {
-        count.map((jokes, index)=>{
-          <div>
-            <h3>{joke.title}</h3>
+        count.map((jokes, index)=>(
+          <div key={index}>
+            <h3>{jokes.title}</h3>
             <p>{jokes.content}</p>
           </div>
-        })
+        ))
       }
     </>
   )

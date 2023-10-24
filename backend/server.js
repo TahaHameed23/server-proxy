@@ -1,12 +1,12 @@
 import express from 'express';
-
+// import dotenv from 'dotenv';
 const app = express();
-
+const PORT = 3000;
 // app.get('/', (req, res) => {
 //   res.send({ message: 'hello' });
 // });
 
-app.get('/jokes', () => {
+app.get('/api/jokes', (req,res) => {
   const jokes = [
     {
       id: 1,
@@ -37,6 +37,6 @@ app.get('/jokes', () => {
   res.send(jokes);
 });
 
-app.listen(3000, () => {
-  'http://localhost:3000/jokes';
+app.listen(PORT, () => {
+  `http://localhost:${PORT}/jokes`;
 });
