@@ -9,7 +9,7 @@
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "https://server-proxy-backend.vercel.app/api/jokes"
+            "dest": "server.js"
         }
     ],
     "rewrites":[
