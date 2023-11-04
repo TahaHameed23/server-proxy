@@ -15,5 +15,11 @@
             "src": "/(.*)",
             "dest": "client/$1"
         }
+    ],
+    "rewrites":[
+        {
+            "source":"",
+            "destination":"https://server-proxy-backend.vercel.app/api/jokes"
+        }
     ]
 }
