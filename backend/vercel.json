@@ -10,15 +10,11 @@
         {
             "src": "/api/(.*)",
             "dest": "server.js"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "client/$1"
         }
     ],
     "rewrites":[
         {
-            "source":"/jokes",
+            "source":"/",
             "destination":"https://server-proxy-backend.vercel.app/api/jokes"
         }
     ]

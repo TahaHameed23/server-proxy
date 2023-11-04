@@ -29,7 +29,7 @@ app.get('/api/jokes', (req,res) => {
     {
       id: 1,
       title: 'Fifth joke',
-      content: 'hahaha',
+      content: 'LOL',
     },
   ];
   res.send(jokes);
