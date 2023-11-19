@@ -1,11 +1,11 @@
 import express from 'express';
-// import { jokes } from './api/jokes.js';
+import { jokes } from './api/jokes.js';
 // import dotenv from 'dotenv';
 const app = express();
 const PORT = 4000;
 
 app.get('/', (req,res) => {
-  res.send('Hello');
+  res.json({"message":'Hello'});
 });
 app.get('/api/jokes', (req,res) => {
   res.send(jokes);
