@@ -17,10 +17,10 @@
         {
             "source": "/api/jokes",
             "destination": "https://server-proxy-backend.vercel.app/api/jokes"
-        },
-        {
-            "source": "/api/jokes/",
-            "destination": "https://server-proxy-backend.vercel.app/api/jokes"
         }
+        // {
+        //     "source": "/api/jokes/",
+        //     "destination": "https://server-proxy-backend.vercel.app/api/jokes"
+        // }
     ]
 }
